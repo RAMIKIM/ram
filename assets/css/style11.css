@@ -1,0 +1,147 @@
+/* layout */
+#contents {}
+#contents > div {position: relative;}
+#section1 {height: 100vh; background: #ffcc00;} 
+#section2 {overflow: hidden; background: #fff;}
+#section3 {background: #ffcc00;}
+#section4 {background: #ffcc00; border-top: 1px solid rgba(0,0,0,0.4); border-bottom: 1px solid rgba(0,0,0,0.4);;  }
+#section5 {height: 1000px;}
+
+
+/* container */
+.container {width: 100%;}
+.fix_container {width: 1400px; margin: 0 auto;}
+.row {padding: 5%;}
+.row2 {padding: 4% 2%;}
+
+/* progress */
+/*
+.progress {background: #000; overflow: hidden; color: #fff; width: 100%; height: 100%; position: absolute; z-index: 5000;}
+.progress-bar {border-top: 1px solid rgba(255,255,255,1); position: absolute; top: 50%; width: 0%;}
+.progress-text {font-size: 40px; font-weight: bold; font-family: 'Sacramento', cursive; position: absolute; top: 55%; left: 50%; transform: translateX(-50%);}
+*/
+
+
+/* sec1 */
+.sec1 {height: 100vh;}
+.sec1 h1 {width: 8vw; position: absolute; top: 20px; left: 20px;}
+.sec1 h1 .st0 {fill:none; stroke:#000000; stroke-miterlimit:10;}
+.sec1 h1 .st1 {fill:none; stroke:#000000; stroke-width:22; stroke-miterlimit:10;}
+.sec1 h1 .st2 {fill:#ffcc00;}
+.sec1 .txt {position: absolute; bottom: 20px; right: 20px; text-align: right; font-family: 'Poppins';}
+.sec1 .txt span {display: block; font-size: 20px; line-height: 1.3em; font-weight: 300;} 
+.sec1 .txt strong {display: block; font-size: 32px; line-height: 1.3em; font-weight: 700; text-transform: uppercase} 
+
+/* audioplayer */
+#timeline {position: fixed; left: 0; top: 0; width: 100%; height: 10px; background: rgba(0,0,0,.3);}
+#playhead {width: 9px;height: 9px;border-radius: 50%;background: rgba(0, 0, 0,1);}
+#pButton {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); outline:none; width: 100%; height: 100vh; }
+#pButton.play {background: url('../img/assets_play.svg') no-repeat center; background-size: 80% 80%;}
+#pButton.pause {background: url('../img/assets_stop.svg') no-repeat center; background-size: 80% 80%;}
+
+
+/* sec2 */
+.sec2 .lyrics {font-size: 13vh; line-height: 1.3em; color: #000; font-family: 'Poppins'; font-weight: 500; text-transform: uppercase; }
+.sec2 .lyrics em:nth-child(1n) {font-weight: 300;}
+.sec2 .lyrics em:nth-child(2n) {font-weight: 500;}
+.sec2 .lyrics em:nth-child(3n) {font-weight: 700;}
+.sec2 .lyrics em:nth-child(4n) {font-weight: 400;}
+.sec2 .lyrics em.it {font-style: italic;}
+
+/* sec3 */
+.sec3 h2 {font-size: 18vw; line-height: .8em; font-family: 'Poppins'; font-weight: 700; padding-left: 20px;}
+.sec3 h2 .top {padding-left: 10px; padding-top: 35px;}
+.sec3 h2 .bom {}
+.sec3 .list {text-align: right; width: 45vw; margin-left: 50vw; font-family: 'Poppins'; font-weight: 300; margin-top: -100px;}
+.sec3 .list li {border-bottom: 1px solid rgba(0,0,0,0.4); font-size: 4vw; line-height: 1.8em; padding: .2em 0;}
+
+/* sec4 */
+.sec4 {overflow: hidden; height: 80vh; }
+.sec4 .left {float: left; width: 50%; height: 100%; border-right: 1px solid rgba(0,0,0,0.4); box-sizing: border-box; padding: 10% 0px;  text-align: center;}
+.sec4 .right {float: left; width: 50%; height: 100%; position: relative; text-align: center; }
+.sec4 .left span {font-size: 10vh; line-height: 1.3em; display: block;  color: #000; font-family: 'Poppins'; }
+.sec4 .left span:nth-child(1) {font-weight: 200; font-style: italic;}
+.sec4 .left span:nth-child(2) {font-weight: 900;}
+.sec4 .left span:nth-child(3) {font-weight: 100;}
+.sec4 .right span {font-size: 70vh; color: #000; font-family: 'Roboto'; font-weight: 100;position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+
+/* sec5 */
+.sec5 {}
+.sec5 h2 {font-family: 'Poppins'; font-weight: 800; padding: 3%;}
+.sec5 h2 span {display: block; font-size: 16vw; line-height: .8em;}
+.sec5 h2 .top {}
+.sec5 h2 .mid {}
+.sec5 h2 .bom {}
+.sec5 h2 .let {width: 40vw; margin-top: -200px;}
+.sec5 h2 .let .st0 {fill:none; stroke:#000; stroke-width:200; stroke-miterlimit:10;}
+
+.sec5 .site {overflow: hidden;}
+.sec5 .site .left {float: left; width: 50%; }
+.sec5 .site .left .bText {padding: 10%; }
+.sec5 .site .left .bText .st0 {fill:none; stroke:#000; stroke-width:180; stroke-miterlimit:10;}
+.sec5 .site .right {padding-top: 6%;}
+.sec5 .site .right h3 {font-size: 40px; font-family: 'Orbitron', sans-serif; padding: 10px;  mix-blend-mode: multiply;}
+.sec5 .site .right dl {padding: 10px; width: 100%; overflow: hidden; box-sizing: border-box; font-size: 16px; font-family: 'Roboto', sans-serif; }
+.sec5 .site .right dl dt {display: inline; width: 20%; float: left; font-weight: 400; text-transform: uppercase;}
+.sec5 .site .right dl dd {display: inline; width: 80%; float: left; font-weight: 200;}
+.sec5 .site .right {float: left; width: 50%;}
+
+.sec5 .site.s1 {padding-bottom: 10%; position: relative;}
+.sec5 .site.s1 .s {position: absolute; left: 0; top: 0; width: 80vw; z-index: -1; }
+.sec5 .site.s1 .s path {fill: #000000;  opacity: .0623}
+
+.sec5 .site.s1 .s em {font-size: 70vw; line-height: 0.8em; opacity: .0423; font-family: 'Poppins'; font-weight: 900; margin-left: -20%; margin-top: -30%;}
+
+.sec5 .site.s2 .left {float: right;}
+.sec5 .site.s2 .right {float: left; text-align: right;}
+.sec5 .site.s2 .right h3 {padding-top: 5%;}
+.sec5 .site.s2 .right dl dt {width: 60%;}
+.sec5 .site.s2 .right dl dd {width: 40%;}
+.sec5 .site.s2 .right figure {padding-left: 10%;}
+
+
+/* keyframes */
+@keyframes rect1 {
+    0%   {stroke-dashoffset: 147;}
+    100% {stroke-dashoffset: 0;}
+}
+@keyframes rect2 {
+    0%   {stroke-dashoffset: 162;}
+    100% {stroke-dashoffset: 0;}
+}
+@keyframes rect3 {
+    0%   {stroke-dashoffset: 147;}
+    100% {stroke-dashoffset: 0;}
+}
+@keyframes rect4 {
+    0%   {stroke-dashoffset: 118;}
+    100% {stroke-dashoffset: 0;}
+}
+
+
+/* mediaquery */
+@media (max-width: 1420px){
+    .fix_container {width: 100%;}
+}
+
+@media (max-width: 1000px){
+    .sec1 h1 {width: 70px;}
+    #pButton.play {background-size: 70% 80%;}
+    #pButton.pause {background-size: 70% 80%;}
+}
+@media (max-width: 800px){
+    .sec1 .txt span {font-size: 16px;} 
+    .sec1 .txt strong {font-size: 24px;} 
+    
+    .sec2 .lyrics {font-size: 10vw;}
+    .sec3 h2 {padding-left: 0; margin-left: -10px;}
+    .sec3 h2 .top {display: inline;}
+    .sec3 h2 .bom {display: inline; margin-left: -13px;}
+    .sec3 .list {margin-top: 5%; margin-left: 0vw; width: 100%; text-align: left;}
+    .sec3 .list li {padding: .4em 0;}
+}
+
+
+
+
+

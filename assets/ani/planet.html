@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>css 회전 애니메이션</title>
+        <style>
+            #container {
+                width: 50vw;
+                height: 10vw;
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                margin: auto;
+                opacity: 0;
+                animation: fadeIn 1s 1, rotate 10s infinite;
+                animation-fill-mode: forwards;
+            }
+
+            .wrap {
+                animation: translate 1000ms infinite ease-in-out alternate, zindex 2000ms infinite ease-in-out;
+                animation-delay: 0, -2000ms;
+                position: absolute;
+            }
+
+            .ball {
+                width: 13vw;
+                height: 13vw;
+                box-shadow: 0 -5px 0 rgba(0, 0, 0, 0.15) inset;
+                background-color: #E3746B;
+                border-radius: 50%;
+                animation: scale 1000ms infinite ease-in-out alternate;
+                animation-delay: -500ms;
+                transform: scale(0.5);
+                border: .2vw solid black;
+            }
+
+            #ball_planet {
+                width: 25vw;
+                height: 25vw;
+                box-shadow: 0 -11.25px 0 rgba(0, 0, 0, 0.15) inset;
+                background: linear-gradient(#e9eef4 0%, #dfe6f0 50%, #d5ddea 100%);
+                border-radius: 50%;
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                margin: auto;
+                animation: none;
+                transform: none;
+            }
+            #ball1 {
+                background: linear-gradient(#be8adc 0%, 70%, #dd8ba1 100%);
+            }
+
+            #wrap2 {
+                animation-delay: -1000ms;
+            }
+
+            #ball2 {
+                background: rgb(238,174,202);
+                background: linear-gradient(#376e97 0%, #97cadd 100%);
+                animation-delay: -1500ms;
+            }
+
+            #wrap3 {
+                animation-delay: -1500ms;
+            }
+
+            #ball3 {
+                background: linear-gradient(#E6B63A 0%, 60%, #F44C6D 100%);
+                animation-delay: -2000ms;
+            }
+
+            #wrap4 {
+                animation-delay: -2500ms;
+            }
+
+            #ball4 {
+                background: linear-gradient(#032354 0%, #04457b 100%);
+                animation-delay: -3000ms;
+            }
+
+            @keyframes translate {
+                0% {
+                    transform: translateX(0) translateY(25px);
+                }
+                100% {
+                    transform: translateX(40vw) translateY(-25px);
+                }
+                }
+            @keyframes scale {
+                100% {
+                    transform: scale(1);
+                }
+            }
+            @keyframes zindex {
+                25% {
+                    z-index: 1;
+                }
+                75% {
+                    z-index: -1;
+                }
+            }
+            @keyframes fadeIn {
+                100% {
+                    opacity: 1;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div class="ball" id="ball_planet"></div>
+
+            <div class='wrap' id='wrap1'>
+                <div class='ball' id='ball1'></div>
+            </div>
+
+            <div class='wrap' id='wrap2'>
+                <div class='ball' id='ball2'></div>
+            </div>
+
+            <div class='wrap' id='wrap3'>
+                <div class='ball' id='ball3'></div>
+            </div>
+
+            <div class='wrap' id='wrap4'>
+                <div class='ball' id='ball4'></div>
+            </div>
+
+        </div>
+    </body>        
+</html>

@@ -1,0 +1,117 @@
+/* layout */
+#contents {}
+#section1 {height: 100vh; background: #FFCC03;} 
+#section2 {}
+#section3 {background: #FFCC03}
+#section4 {}
+#section5 {height: 2000px;background: #FFCC03;}
+#section6 {}
+#section7 {}
+
+/* container */
+.container {width: 100%;}
+
+/* row */
+.row {padding: 20px;}
+
+/* progress */
+.progress {background: #FFCC03; color: #fff; width: 100%; height: 100%; position: absolute; z-index: 9999;}
+.progress-text {font-size: 20px; font-weight: 100; margin-top: 10px; position: absolute; text-align: center; top: 60%; width: 100%; color: #000; font-family: 'Russo One', sans-serif;}
+#svg {position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);}
+#svg text {text-transform: uppercase;animation: stroke 5s infinite alternate;stroke-width: 2;stroke: #000;font-size: 140px;font-family: 'Russo One', sans-serif;}
+
+
+/* sec1 */
+.sec1 {}
+.sec1 h1 {width: 300px; position: absolute; left: 20px; top: 20px;}
+.sec1 h1 svg {width: 100%;}
+.sec1 h1 svg .st0 {fill:none; stroke:#000; stroke-width:52; stroke-miterlimit:10;}
+.sec1 h1 .rect1 {stroke-dasharray:800; stroke-dashoffset:800; stroke-miterlimit:10;}
+.sec1 h1 .rect2 {stroke-dasharray:800; stroke-dashoffset:800; stroke-miterlimit:10;}
+.sec1 h1 .rect3 {stroke-dasharray:800; stroke-dashoffset:800; stroke-miterlimit:10;}
+
+.sec1 .jlogo {position: absolute; right: 5%; top: 5%; width: 50%; height: 100vh;}
+.sec1 .jlogo svg {width: 100%;}
+.sec1 .jlogo .rect4 {animation: rect2 2s 0.6s 1 ease-in-out forwards; stroke-dasharray:1820; stroke-dashoffset:1820; stroke-miterlimit:10;}
+.sec1 .jlogo img {transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);}
+.sec1 .jlogo img:hover {transform: scale(0.8) rotate(45deg) translate(-90px, -5px);}
+
+.sec1 .txt {position: absolute; bottom: 20px; left: 20px;}
+.sec1 .txt span {display: block; font-size: 16px; margin-bottom: 10px;} 
+.sec1 .txt strong {display: block; font-size: 38px; line-height: 37px; font-weight: 900;} 
+.sec1 .txt em {display: block; font-size: 24px;} 
+
+/* sec1 animation */
+.sec1 h1 .rect1   {opacity: 0;}
+.sec1 h1 .rect2   {opacity: 0;}
+.sec1 h1 .rect3   {opacity: 0;}
+.sec1 .jlogo      {opacity: 0; transform: scale(0)}
+.sec1 .txt span   {opacity: 0; transform: translateY(20px); transition: opacity .6s 3.2s ease, transform 0.5s 3.2s ease;}
+.sec1 .txt strong {opacity: 0; transform: translateY(20px); transition: opacity .6s 3.4s ease, transform 0.5s 3.4s ease;}
+.sec1 .txt em     {opacity: 0; transform: translateY(20px); transition: opacity .6s 3.6s ease, transform 0.5s 3.6s ease;}
+
+body.active .sec1 h1 .rect1   {opacity: 1; animation: rect1 2s 2.1s 1 ease-in-out forwards;}
+body.active .sec1 h1 .rect2   {opacity: 1; animation: rect1 2s 2.7s 1 ease-in-out forwards;}
+body.active .sec1 h1 .rect3   {opacity: 1; animation: rect1 2s 2.3s 1 ease-in-out forwards;}
+body.active .sec1 .jlogo      {opacity: 1; animation: rotate1 1s 3s 1 ease-in-out forwards;}
+body.active .sec1 .txt span   {opacity: 1; transform: translateY(0px);}
+body.active .sec1 .txt strong {opacity: 1; transform: translateY(0px);}
+body.active .sec1 .txt em     {opacity: 1; transform: translateY(0px);}
+
+/* sec2 */
+.sec2 img {display: block;}
+
+/* sec3 */
+.sec3 {text-transform: uppercase; }
+.sec3 h2 {position: relative; font-family: 'Muli'; font-size: 150px; text-align: right; font-weight: 700; }
+.sec3 h2:before {content: '1'; position: absolute; left: 0px; top: 0; font-size: 50px; font-weight: 200;}
+.sec3 .table_box .tr {border-bottom: 2px solid #000; font-size: 70px; padding-top: 20px; font-weight: 200; }
+.sec3 .table_box .tr:last-child {border-bottom: 0;}
+
+/* sec4 */
+.sec4 {}
+.sec4 img {display: block;}
+
+/* sec5 */
+.sec5 {}
+.site {}
+.site h2 {text-transform: uppercase;font-size: 15vw;font-weight: 800;letter-spacing: -8px;line-height: 0.8em;color: #000;}
+
+.site h2 span {display: block;}
+.site h2 span:nth-child(1) {opacity: 0; transform: translateY(60px); transition: all 0.7s 0.1s cubic-bezier(0.54, 0.01, 1, 0.38);}
+.site h2 span:nth-child(2) {opacity: 0; transform: translateY(60px); transition: all 0.7s 0.2s cubic-bezier(0.54, 0.01, 1, 0.38);}
+.site h2 span:nth-child(3) {opacity: 0; transform: translateY(60px); transition: all 0.7s 0.3s cubic-bezier(0.54, 0.01, 1, 0.38);}
+
+.sec5.show .site h2 span:nth-child(1) {opacity: 1; transform: translateY(0);}
+.sec5.show .site h2 span:nth-child(2) {opacity: 1; transform: translateY(0);}
+.sec5.show .site h2 span:nth-child(3) {opacity: 1; transform: translateY(0);}
+
+
+
+
+/* mediaquery */
+@media (max-width: 800px){
+    .sec1 h1 {position: static;}
+    .sec1 .slogo {position: static; width: 100px; height: 100px;}
+    .sec1 .txt {position: static;}
+}
+
+/* keyframes */
+@keyframes rect1{
+    0%   {stroke-dashoffset:798;}
+    100% {stroke-dashoffset:0;}
+}
+@keyframes rect2{
+    0%   {stroke-dashoffset:1820;}
+    100% {stroke-dashoffset:0;}
+}
+@keyframes rotate1 {
+    0%   {transform: scale(0) rotate()}
+    100% {transform: scale(1) rotate(720deg)}
+}
+@keyframes stroke {
+	0%   {fill: rgba(72,138,20,0); stroke: rgba(0,0,0,1); stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;}
+	70%  {fill: rgba(72,138,20,0); stroke: rgba(0,0,0,1); }
+	80%  {fill: rgba(72,138,20,0); stroke: rgba(0,0,0,1); stroke-width: 3; }
+	100% {fill: rgba(72,138,204,1); stroke: rgba(0,0,0,0); stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;}
+}

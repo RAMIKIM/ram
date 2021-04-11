@@ -1,0 +1,612 @@
+/* layout */
+#contents {}
+#contents > section {position: relative;}
+#section1 {height: 100vh; background: #ffcc00;} 
+#section2 {overflow: hidden; background: #fff;}
+#section3 {background: #ffcc00;}
+#section4 {background: #ffcc00; border-top: 1px solid rgba(0,0,0,0.4); border-bottom: 1px solid rgba(0,0,0,0.4);}
+#section5 {background: #fff;}
+#section6 {background: #ffcc00;}
+#section7 {background: #0099ff;}
+#section8 {background: #fff;}
+
+/* container */
+.container {width: 100%;}
+.row {padding: 5%;}
+.row2 {padding: 2%;}
+
+/* progress */
+
+.progress {background: #000; overflow: hidden; color: #fff; width: 100%; height: 100%; position: absolute; z-index: 5000;}
+.progress-bar {border-top: 1px solid rgba(255,255,255,1); position: absolute; top: 50%; width: 0%;}
+.progress-text {font-size: 40px; font-weight: bold; font-family: 'Sacramento', cursive; position: absolute; top: 55%; left: 50%; transform: translateX(-50%);}
+
+
+
+/* sec1 */
+.sec1 {height: 100vh;}
+.sec1 h1 {width: 9vw; position: absolute; top: 20px; left: 20px;}
+.sec1 h1 .st0 {fill:none; stroke:#000000; stroke-miterlimit:10;}
+.sec1 h1 .st1 {fill:none; stroke:#000000; stroke-width:22; stroke-miterlimit:10;}
+.sec1 h1 .st2 {fill:#ffcc00;}
+.sec1 h1 .rect1 {
+    animation: rect1 1s .1s ease-in-out;
+    stroke-dasharray: 147; stroke-dashoffset: 147; stroke-miterlimit:10;
+    animation-fill-mode: forwards;
+}
+.sec1 h1 .rect2 {
+    animation: rect2 1s .1s ease-in-out;
+    stroke-dasharray: 162; stroke-dashoffset: 162; stroke-miterlimit:10;
+    animation-fill-mode: forwards;
+}
+.sec1 h1 .rect3 {
+    animation: rect3 1s .1s cubic-bezier(0.25, 0.1, 0.25, 1);
+    stroke-dasharray: 147; stroke-dashoffset: 147; stroke-miterlimit:10;
+    animation-fill-mode: forwards;
+}
+.sec1 h1 .rect4 {
+    animation: rect4 1s .1s cubic-bezier(0.25, 0.1, 0.25, 1);
+    stroke-dasharray: 118; stroke-dashoffset: 118; stroke-miterlimit:10;
+    animation-fill-mode: forwards;
+}
+.sec1 .txt {position: absolute; bottom: 20px; right: 20px; text-align: right; font-family: 'Poppins';}
+.sec1 .txt span {display: block; font-size: 20px; line-height: 1.3em; font-weight: 300; opacity: 0;} 
+.sec1 .txt strong {display: block; font-size: 32px; line-height: 1.3em; font-weight: 600; text-transform: uppercase; opacity: 0;}
+
+.sec1 .txt span:first-child {animation: line .6s 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;}
+.sec1 .txt strong {animation: line .6s 1.2s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;}
+.sec1 .txt span:nth-child(3) {animation: line .6s 1.3s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;}
+.sec1 .txt span:last-child {
+    animation: line .6s 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+    font-size: 16px; color: #555;
+    line-height: 1.5em;
+    display: none;
+}
+
+/* audioplayer */
+#timeline {position: fixed; left: 0; top: 0; width: 100%; height: 10px; background: rgba(0,0,0,.3); opacity: 0;}
+#playhead {width: 9px; height: 9px; border-radius: 50%; background: rgba(0, 0, 0,1); opacity: 0;}
+#pButton {opacity: 0; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); outline:none; width: 100%; height: 100vh;}
+#pButton.play {background: url('../img/assets_play.svg') no-repeat center; background-size: 80% 80%;}
+#pButton.pause {background: url('../img/assets_stop.svg') no-repeat center; background-size: 80% 80%;} 
+
+#timeline {animation: opa .6s 1.6s cubic-bezier(0.25, 0.1, 0.25, 1) forwards; z-index: 1;}
+#playhead {animation: opa .6s 1.6s cubic-bezier(0.25, 0.1, 0.25, 1) forwards; z-index: 1;}
+#pButton {animation: opa 1.5s 1.6s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;}
+
+
+
+/* sec2 */
+.sec2 .lyrics {font-size: 8vw; line-height: 1.3em; color: #000; font-family: 'Poppins'; font-weight: 500; text-transform: uppercase; }
+.sec2 .lyrics em:nth-child(1n) {font-weight: 200;}
+.sec2 .lyrics em:nth-child(2n) {font-weight: 200;}
+.sec2 .lyrics em:nth-child(3n) {font-weight: 500;}
+.sec2 .lyrics em.it {font-style: italic;}
+.sec2 .lyrics .fw {font-weight: 700;}
+.sec2 .lyrics span.line {display: inline-block; width: 3em; height: .05em; background: #000; vertical-align: middle;}
+
+.sec2 .lyrics .rev {opacity: 0; display: inline-block;}
+.sec2 .lyrics.show .rev {animation: revealY .6s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;}
+.sec2 .lyrics .rev:nth-child(1) {animation-delay: .1s;}
+.sec2 .lyrics .rev:nth-child(2) {animation-delay: .15s;}
+.sec2 .lyrics .rev:nth-child(3) {animation-delay: .2s;}
+.sec2 .lyrics .rev:nth-child(4) {animation-delay: .25s;}
+.sec2 .lyrics .rev:nth-child(5) {animation-delay: .3s;}
+.sec2 .lyrics .rev:nth-child(6) {animation-delay: .35s;}
+.sec2 .lyrics .rev:nth-child(7) {animation-delay: .4s;}
+.sec2 .lyrics .rev:nth-child(8) {animation-delay: .45s;}
+.sec2 .lyrics .rev:nth-child(9) {animation-delay: .5s;}
+.sec2 .lyrics .rev:nth-child(10) {animation-delay: .55s;}
+.sec2 .lyrics .rev:nth-child(11) {animation-delay: .6s;}
+.sec2 .lyrics .rev:nth-child(12) {animation-delay: .65s;}
+.sec2 .lyrics .rev:nth-child(13) {animation-delay: .7s;}
+.sec2 .lyrics .rev:nth-child(14) {animation-delay: .75s;}
+.sec2 .lyrics .rev:nth-child(15) {animation-delay: .8s;}
+.sec2 .lyrics .rev:nth-child(16) {animation-delay: .85s;}
+.sec2 .lyrics .rev:nth-child(17) {animation-delay: .9s;}
+
+
+
+/* sec3 */
+.sec3 {}
+.sec3 h2 {font-size: 17vw; font-family: 'Poppins'; font-weight: 800; line-height: .8em;}
+.sec3 h2 span {display: block; opacity: 0;}
+.sec3.show h2 span {opacity: 1;}
+.sec3.show h2 em {letter-spacing: .07em; display: inline-block; opacity: 0; animation: revealX .8s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;}
+.sec3 h2 .bot em {animation-delay: .2s;}
+
+.sec3 .let {position: absolute; width: 40vw; opacity: 0; margin-top: -12vw;}
+.sec3 .let .st0 {fill:none; stroke:#000; stroke-width:200; stroke-miterlimit:10;}
+.sec3.show .let {opacity: 1;}
+.sec3.show .let .st0 {animation: letter1 .6s .6s ease-in-out forwards; stroke-dasharray: 893; stroke-dashoffset: 893; stroke-miterlimit: 10;} 
+
+.sec3 .circle {position: absolute; top: 4%; right: 2%; width: 12vw; height: 12vw; background: #000; border-radius: 50%; opacity: 0;}
+.sec3.show .circle {animation: size .6s .5s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;}
+
+.sec3 .list {
+    overflow: hidden; 
+    text-align: left; 
+    width: 40vw; 
+    margin-left: 55vw; 
+    font-family: 'Didact Gothic';  
+    margin-top: 50px;
+    margin-bottom: 7%;
+}
+.sec3 .list li {
+    opacity: 0; 
+    border-bottom: 1px solid rgba(0,0,0,0.4); 
+    font-size: 2vw; 
+    line-height: 1.8em; 
+    padding: .7em 0;
+}
+
+.sec3.show .list li {animation: revealY 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;}
+.sec3 .list li:nth-child(1) {animation-delay: 1.3s; font-size: 5vw; font-weight: 500; padding: .05em 0;}
+.sec3 .list li:nth-child(2) {animation-delay: 1.4s;}
+.sec3 .list li:nth-child(3) {animation-delay: 1.5s;}
+.sec3 .list li:nth-child(4) {animation-delay: 1.6s;}
+.sec3 .list li:nth-child(5) {animation-delay: 1.7s;}
+.sec3 .list li:nth-child(6) {animation-delay: 1.8s;} 
+.sec3 .list li span {display: inline-block; padding-left: 2em;}
+.sec3 .list li:nth-child(n+4) span {padding-left: 3em;}
+
+/* sec4 */
+.sec4 {overflow: hidden;}
+.sec4 .left {
+    float: left; width: 50%; height: 100%; padding: 8vw 0px;  text-align: center; overflow: hidden;}
+.sec4 .left span {
+    font-size: 8vw; 
+    line-height: 1.3em; 
+    display: block;  
+    color: #000; 
+    font-family: 'Poppins';
+    opacity: 0; 
+}
+.sec4 .left span.hov1 {font-weight: 400; font-style: italic;}
+.sec4 .left span.hov2 {font-weight: 900;}
+.sec4 .left span.hov3 {font-weight: 300;}
+.sec4 .left span.hov4 {font-weight: 700;}
+.sec4.show .left span {animation: revealY .8s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;}
+.sec4.show .left span.hov1 {animation-delay: .2s}
+.sec4.show .left span.hov2 {animation-delay: .4s}
+.sec4.show .left span.hov3 {animation-delay: .55s}
+.sec4.show .left span.hov4 {animation-delay: .65s}
+.sec4 .right { 
+    float: left; 
+    width: 50%; 
+    height: 100%;  
+    box-sizing: border-box;
+    text-align: center;
+    border-left: 1px solid rgba(0,0,0,0.4);
+}
+.sec4 .right span {
+    font-size: 40vw; color: #000; font-family: 'Poppins'; font-weight: 600;
+    top: 10vh;
+    left: 10vw;
+}
+.sec4.show .right span.shw1 {animation: opa .8s .2s cubic-bezier(0.25, 0.1, 0.25, 1);}
+.sec4 .right span.shw2 {display: none;}
+.sec4 .right span.shw3 {display: none;}
+.sec4 .right span.shw4 {display: none;}
+
+.sec4 .right span.shw2.show {display: block; margin-top: -1.5em;}
+.sec4 .right span.shw3.show {display: block; margin-top: -1.5em;}
+.sec4 .right span.shw4.show {display: block; margin-top: -1.5em; font-weight: : 700;}
+
+
+
+/* sec5 */
+.sec5 {}
+.sec5 h2 {font-family: 'Poppins'; font-weight: 800; padding: 2%;}
+.sec5 h2 span {display: block; font-size: 16vw; line-height: .8em; opacity: 0;}
+.sec5.show h2 span {opacity: 1;}
+.sec5.show h2 em {display: inline-block; opacity: 0; animation: revealX .8s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;}
+.sec5 h2 .mid em {animation-delay: .2s;}
+.sec5 h2 .bot em {animation-delay: .45s;}
+
+.sec5 h2 .let {opacity: 0; width: 40vw; margin-top: -12vw;}
+.sec5 h2 .let .st0 {fill:none; stroke:#000; stroke-width:200; stroke-miterlimit:10;}
+.sec5.show h2 .let {opacity: 1;}
+.sec5.show h2 .let .st0 {animation: letter1 .6s 1s ease-in-out forwards; stroke-dasharray: 893; stroke-dashoffset: 893; stroke-miterlimit: 10;} 
+
+.sec5 .circle {position: absolute; top: 1%; right: 2%; width: 12vw; height: 12vw; background: #000; border-radius: 50%; opacity: 0;}
+.sec5.show .circle {animation: size .6s .5s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;}
+
+.sec5 .site {overflow: hidden; padding-bottom: 10%;}
+.sec5 .site .left {float: left; width: 50%; opacity: 0;}
+.sec5 .site .left em {
+    font-size: 70vw; 
+    line-height: 0.8em; 
+    opacity: .0423; 
+    font-family: 'Poppins'; 
+    font-weight: 900; 
+    margin-left: -14%; 
+    margin-top: -30%;
+}
+
+.sec5 .site.s1 .left a {
+    display: block;
+    width: 12vw;
+    height: 12vw;
+    border-radius: 50%;
+    background: #000;
+    margin-left: 31vw;
+    margin-top: 1vw;
+}
+
+.sec5 .site.s1 .left a
+/* .sec5 .site.s1 .button {
+  display: flex;
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(255, 255, 255, 1);
+  border-radius: 50%;
+  cursor: pointer;
+  user-select: none;
+  
+  .bCircle {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, .5);
+  }
+} */
+
+
+.sec5 .site .right {padding-top: 12%; z-index: 1; position: relative; opacity: 0;}
+.sec5 .site .right h3 {font-size: 4vw; font-family: 'Didact Gothic'; padding: 1vw;  mix-blend-mode: multiply;}
+.sec5 .site .right dl {padding: 1vw; width: 100%; overflow: hidden; box-sizing: border-box; font-family: 'Roboto'; font-size: 1.4vw;}
+.sec5 .site .right dl dt {display: inline; width: 20%; float: left; font-weight: 400; text-transform: uppercase;}
+.sec5 .site .right dl dd {display: inline; width: 80%; float: left; font-weight: 300;}
+.sec5 .site .right {float: right; width: 50%;}
+
+.sec5 .site.s1.show .left {animation: revealY .8s .3s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;}
+.sec5 .site.s1.show .right {animation: revealY .8s .5s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;}
+.sec5 .site.s2.show .left {animation: revealY .8s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;}
+.sec5 .site.s2.show .right {animation: revealY .8s .3s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;}
+.sec5 .site.s3.show .left {animation: revealY .8s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;}
+.sec5 .site.s3.show .right {animation: revealY .8s .3s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;}
+.sec5 .site.s4.show .left {animation: revealY .8s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;}
+.sec5 .site.s4.show .right {animation: revealY .8s .3s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;}
+.sec5 .site.s5.show .left {animation: revealY .8s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;}
+.sec5 .site.s5.show .right {animation: revealY .8s .3s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;}
+
+.sec5 .site.s2 .left {float: right; width: 50%;}
+.sec5 .site.s2 .left em {margin-left: -50%}
+.sec5 .site.s2 .right {float: left; width: 50%; text-align: right; z-index: 1; position: relative;}
+.sec5 .site.s2 .right h3 {padding-top: 5%;}
+.sec5 .site.s2 .right dl dt {width: 60%;}
+.sec5 .site.s2 .right dl dd {width: 40%;}
+.sec5 .site.s2 .right figure {padding-left: 10%;}
+
+.sec5 .site.s3 .left em {margin-left: -50%;}
+.sec5 .site.s3 .right figure {padding-right: 10%;}
+
+.sec5 .site.s4 .left {float: right; width: 50%;}
+.sec5 .site.s4 .left em {margin-left: -50%; letter-spacing: -.05em;}
+.sec5 .site.s4 .right {float: left; width: 50%; text-align: right; z-index: 1; position: relative;}
+.sec5 .site.s4 .right h3 {padding-top: 5%;}
+.sec5 .site.s4 .right dl dt {width: 60%;}
+.sec5 .site.s4 .right dl dd {width: 40%;}
+.sec5 .site.s4 .right figure {padding-left: 10%;}
+
+.sec5 .site.s5 .left em {margin-left:  -50%; letter-spacing: -.07em;}
+
+/* sec6 */
+.sec6 .band {
+    border-bottom: 1px solid rgba(0,0,0,.7);
+    overflow: hidden;
+}
+.sec6 .band p {
+    font-family: 'Poppins'; 
+    font-weight: 300; 
+    font-size: 8vw; 
+    text-transform: uppercase;
+    white-space: nowrap;
+    padding: 2vw 0;
+}
+.sec6 .band p span {display: inline-block; width: 9vw; height: .7vw; background: #000; vertical-align: middle;}
+
+/* sec7 */
+.sec7 h2 {font-family: 'Poppins'; font-weight: 800; padding: 2%;}
+.sec7 h2 > span {display: block; font-size: 16vw; line-height: .8em; letter-spacing: .3vw;}
+.sec7 h2 span:first-child {margin-left: -1vw;}
+.sec7 h2 span:first-child .letter {margin-left: -1vw;}
+.sec7 h2 .let {opacity: 0; width: 40vw; margin-top: -12vw;}
+.sec7 h2 .let .st0 {fill:none; stroke:#000; stroke-width:200; stroke-miterlimit:10;}
+.sec7.show h2 .let {opacity: 1;}
+.sec7.show h2 .let .st0 {animation: letter1 .6s 1s ease-in-out forwards; stroke-dasharray: 893; stroke-dashoffset: 893; stroke-miterlimit: 10;} 
+
+.sec7 .circle {position: absolute; top: 2%; right: 2%; width: 12vw; height: 12vw; background: #000; border-radius: 50%;}
+
+.sec7 .cont {display: flex;}
+.sec7 .cont .left {position: relative; width: 50%; height: 60vw;}
+.sec7 .cont .left iframe {position: absolute; top: 0; width: 100%; height: 100%;}
+.sec7 .cont .left iframe.frame1 {margin-left: -5vw;}
+.sec7 .cont .left iframe.frame2 {display: none;}
+.sec7 .cont .left iframe.frame3 {display: none;}
+.sec7 .cont .left.fix {position: fixed; left: 0; top: 0;}
+
+
+.sec7 .cont .right.fix {margin-left: 50%;}
+.sec7 .cont .right {width: 50%; padding-bottom: 8vw; padding-right: 2%; padding-left: 2%;}
+.sec7 .cont .right .code {width: 100%;}
+.sec7 .cont .right .code li {
+    padding: 2vw 0; 
+    border-bottom: 1px solid rgba(255,255,255,.5); 
+    color: #fff;
+    font-family: 'Didact Gothic';
+    font-size: 5vw;
+    font-weight: 300;
+}
+.sec7 .cont .right .code li:first-child span {
+    display: block; line-height: 1em; font-size: 8vw;
+}
+.sec7 .cont .right .code li {vertical-align: center;}
+.sec7 .cont .right .code li a {float: right; position: relative; margin-right: .3em;}
+.sec7 .cont .right .code li a span {
+    display: inline-block; 
+    width: .1em; 
+    height: .9em; 
+    background: #fff; 
+    margin-right: 18px;
+    transition: all .2s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+.sec7 .cont .right .code li a em {
+    display: block; 
+    position: absolute; 
+    top: .63em; 
+    left: -.4em; 
+    width: .9em; 
+    height: .1em; 
+    background: #fff;
+}
+.sec7 .cont .right .code li a.open span {transform: rotate(90deg);}
+.sec7 .cont .right .code li .desc {margin-top: 2vw; display: none;}
+.sec7 .cont .right .code li .desc li {font-size: 1.5vw;}
+.sec7 .cont .right .code li .desc li:first-child {
+    border-top: 1px solid rgba(255,255,255,.5);
+}
+.sec7 .cont .right .code li .desc li:last-child {
+    border: none;
+    padding-bottom: 0;
+}
+
+
+/* sec8 */
+.sec8 h2 span {display: block; font-family: 'Poppins'; font-weight: 800;  font-size: 16vw; line-height: .8em;}
+.sec8 h2 .let {opacity: 0; width: 40vw; margin-top: -24vw;}
+.sec8 h2 .let .st0 {fill:none; stroke:#000; stroke-width:200; stroke-miterlimit:10;}
+.sec8.show h2 .let {opacity: 1;}
+.sec8.show h2 .let .st0 {animation: letter1 .6s 1s ease-in-out forwards; stroke-dasharray: 893; stroke-dashoffset: 893; stroke-miterlimit: 10;} 
+.sec8 .circle {position: absolute; top: 4%; right: 2%; width: 12vw; height: 12vw; background: #000; border-radius: 50%;}
+
+.sec8 ul {width: 50%; margin-left: 50%; margin-top: 5vw;}
+.sec8 ul li {font-family: 'Didact Gothic'; font-size: 1.8vw; padding-bottom: 2vw; border-bottom: 1px solid #000; margin-bottom: 2vw;}
+.sec8 ul li:nth-child(4) {text-align: center;}
+.sec8 ul li span {float: right;}
+
+.sec8 ul li img {width: 40%; margin: 0 auto;}
+
+.sec8 li form {width: 100%;}
+.sec8 form fieldset input {
+    display: block;
+    width: 100%;
+    height: 4vw;
+    margin-bottom: 2vw;
+    font-size: 1.8vw;
+    box-sizing: border-box;
+    padding-bottom: 2vw;
+    border: none;
+    border-bottom: 1px solid #000;
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+    appearance: none;
+    border-radius: 0;
+}
+.sec8 form fieldset textarea {
+    display: block;
+    width: 100%;
+    height: 20vw;
+    margin-bottom: 2vw;
+    font-size: 1.8vw;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #000;
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+    appearance: none;
+    border-radius: 0;
+}
+.sec8 form fieldset button {
+    display: block;
+    width: 100%;
+    font-size: 1.8vw;
+    background: transparent;
+}
+
+
+/* keyframes */
+@keyframes rect1 {
+    0%   {stroke-dashoffset: 147;}
+    100% {stroke-dashoffset: 0;}
+}
+@keyframes rect2 {
+    0%   {stroke-dashoffset: 162;}
+    100% {stroke-dashoffset: 0;}
+}
+@keyframes rect3 {
+    0%   {stroke-dashoffset: 147;}
+    100% {stroke-dashoffset: 0;}
+}
+@keyframes rect4 {
+    0%   {stroke-dashoffset: 118;}
+    100% {stroke-dashoffset: 0;}
+}
+
+@keyframes line {
+    0%   {transform: translateY(20px);}
+    100% {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes size {
+    0%   {opacity: 1; transform: scale(.5);}
+    50%  {opacity: 1; transform: scale(1.1, 1.1);}
+    100% {opacity: 1; transform: scale(1, 1);}
+}
+
+@keyframes opa {
+    0%   {}
+    100% {opacity: 1;}
+}
+
+@keyframes letter1 {
+    0%   {stroke-dashoffset: 893;}
+    100% {stroke-dashoffset: 0;}
+}
+
+@keyframes revealY {
+    0% {transform: translateY(100%);}
+    100% {opacity: 1; transform: translateY(0);}
+}
+@keyframes revealX {
+    0% {transform: translateX(-100%);}
+    100% {opacity: 1; transform: translateY(0);}
+}
+@keyframes logo1 {
+    0%   {stroke-dashoffset: 1583;}
+    100% {stroke-dashoffset: 0;}
+}
+@keyframes logo2 {
+    0%   {stroke-dashoffset: 1583;}
+    100% {stroke-dashoffset: 0;}
+}
+@keyframes logo3 {
+    0%   {stroke-dashoffset: 2608;}
+    100% {stroke-dashoffset: 0;}
+}
+
+
+
+/* mediaquery */
+@media (max-width: 1290px) {
+    .sec7 .cont .right .code li:first-child span {font-size: 9vw;}
+    .sec7 .cont .right .code li .desc li {font-size: 2vw;}
+}
+
+@media (max-width: 1024px){
+    .sec1 h1 {width: 80px;}
+    #pButton.play {background-size: 70% 80%;}
+    #pButton.pause {background-size: 70% 80%;}
+
+    .sec3 .letter {top: 22%; width: 42%;}
+
+    .sec7 .cont .left iframe {margin-top: 5vw;}
+    .sec7 .cont .right .code li .desc li {font-size: 2.5vw;}
+}
+
+@media (max-width: 800px){
+    .sec1 .txt span {font-size: 16px;} 
+    .sec1 .txt strong {font-size: 22px;} 
+
+
+    .row2 {padding: 6% 4%;}
+    .sec3 h2 {padding-left: 0; margin-left: -10px; line-height: .9em;}
+    .sec3 h2 .bom {padding-left: 10px;}
+    .sec3 .circle {top: 3%; right: 4%;}
+    .sec3 .let {position: inherit; margin-top: -13.5%; width: 44%;}
+    .sec3 .list {margin-top: 4%; margin-left: 0vw; margin-bottom: 2%; width: 100%; text-align: left;}
+    .sec3 .list li {padding: .8em 0; font-size: 4vw;}
+    .sec3 .list li:first-child {font-size: 8vw;}
+
+    #section4 {border-top: none;}
+    .sec4 .right {display: none;}
+    .sec4 .left {width: 100%; text-align: left; margin-left: 6vw; padding: 8vw 0 16vw 0;}
+    .sec4 .left span {font-size: 10vw;}
+    .sec4 .left span:nth-child(1)::after {content: "80%"; display: inline-block; margin-left: 5vw;}
+    .sec4 .left span:nth-child(2)::after {content: "50%"; display: inline-block; margin-left: 5vw;}
+    .sec4 .left span:nth-child(3)::after {content: "80%"; display: inline-block; margin-left: 5vw;}
+    .sec4 .left span:nth-child(4)::after {content: "70%"; display: inline-block; margin-left: 5vw;}
+
+    .sec5 h2 {padding: 6% 4%;}
+    .sec5 .circle {top: 1%; right: 4%;}
+    .sec5 .site .left {width: 0%;}
+    .sec5 .site .left em {margin-left: -42%;}
+    .sec5 .site .right {width: 65%; padding-top: 22%;}
+    .sec5 .site .left em {font-size:  56vw;}
+    .sec5 .site .right h3 {font-size: 6.5vw;}
+    .sec5 .site .right dl {font-size: 2.5vw;}
+    .sec5 .site .right dl dt {width: 30%;}
+    .sec5 .site .right dl dd {width: 70%;}
+
+    .sec5 .site.s2 .left {width: 35%;}
+    .sec5 .site.s2 .right {width: 65%;}   
+    .sec5 .site.s2 .right dl dt {width: 40%;}
+    .sec5 .site.s2 .right dl dd {width: 60%;}
+    .sec5 .site.s2 .left em {margin-left: -111%;}
+     
+    .sec5 .site.s4 .left {width: 35%;}
+    .sec5 .site.s4 .right {width: 65%;}
+    .sec5 .site.s4 .right dl dt {width: 40%;}
+    .sec5 .site.s4 .right dl dd {width: 60%;}
+    .sec5 .site.s4 .left em {letter-spacing: -.06em; margin-left: -111%;}
+
+    .sec6 .band p {padding: 4vw 0;}
+
+    .sec7 h2 {padding: 6% 4%;}
+    .sec7 .circle {top: 2%; right: 4%;}
+    .sec7 .cont {display: block;}
+    .sec7 .cont .left {width: 100%;}
+    .sec7 .cont .left iframe {margin-top: 0;}
+    .sec7 .cont .left iframe.frame1 {height: 70vw;}
+    .sec7 .cont .left iframe.frame2 {height: 55vw;}
+    .sec7 .cont .right {width: 100%; margin-top: -10vw; box-sizing: border-box; padding: 6% 4%;}
+    .sec7 .cont .right .code li {font-size: 8vw;}
+    .sec7 .cont .right .code li:first-child span {font-size: 13vw;}
+    .sec7 .cont .right .code li .desc li {font-size: 4vw;}
+
+    .sec7 .cont .left.fix {position: relative;}
+    .sec7 .cont .right.fix {margin-left: 0;}
+
+
+    .sec8 ul {width: 100%; margin-left: 0; margin-top: 10vw;}
+    .sec8 ul li {font-size: 3vw; padding-bottom: 3vw; margin-bottom: 3vw;}
+
+    .sec8 form fieldset input {height: 8vw; font-size: 3vw; padding-bottom: 3vw; margin-bottom: 3vw;}
+    .sec8 form fieldset textarea {height: 30vw; font-size: 3vw; padding-bottom: 3vw; margin-bottom: 3vw;}
+    .sec8 form fieldset button {font-size: 3vw;}
+
+@media (max-width: 600px) {
+    .sec1 h1 {width: 70px;}
+
+    .sec7 .cont .left {height: 90vw;}
+    .sec7 .cont .left iframe.frame1 {height: 80vw;}
+    .sec7 .cont .left iframe.frame2 {height: 60vw;}
+    .sec7 .cont .left iframe.frame3 {height: 55vw;}
+    .sec7 .cont .right {margin-top: -20vw;}
+
+    .sec8 ul li {font-size: 4vw; padding-bottom: 4vw; margin-bottom: 4vw;}
+
+    .sec8 form fieldset input {height: 10vw; font-size: 4vw; padding-bottom: 4vw; margin-bottom: 4vw;}
+    .sec8 form fieldset textarea {height: 40vw; font-size: 4vw; padding-bottom: 4vw; margin-bottom: 4vw;}
+    .sec8 form fieldset button {font-size: 4vw;}
+}
+
+@media (max-width: 400px) {
+    .sec7 .cont .left {height: 120vw;}
+    .sec7 .cont .left iframe.frame1 {height: 130vw;}
+    .sec7 .cont .left iframe.frame2 {height: 110vw;}
+    .sec7 .cont .left iframe.frame3 {height: 110vw;}
+    .sec7 .cont .right {margin-top: -15vw;}
+}
+
+@media (max-width: 400px) {
+    .sec7 .cont .left iframe.frame1 {height: 140vw;}
+}

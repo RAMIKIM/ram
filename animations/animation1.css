@@ -1,0 +1,40 @@
+@charset "utf-8";
+body {
+    height:500px;
+    background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.circle {
+    width: 10px; height: 10px;
+    margin: 5px 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    transform-origin: top center;
+    animation: spin 1s linear infinite;
+}
+.row {
+    display: flex;
+    flex: 0 1 100%;
+}
+@keyframes spin {
+    0%   {transform: rotate(0) scale(1.1)}
+    50%  {transform: rotate(180deg) scale(0.9)}
+    100% {transform: rotate(360deg) scale(1.1)}
+}
+
+.row:nth-child(1) .circle  {animation-delay: 100ms;}
+.row:nth-child(2) .circle  {animation-delay: 200ms;}
+.row:nth-child(3) .circle  {animation-delay: 300ms;}
+.row:nth-child(4) .circle  {animation-delay: 400ms;}
+.row:nth-child(5) .circle  {animation-delay: 500ms;}
+.row:nth-child(6) .circle  {animation-delay: 600ms;}
+.row:nth-child(7) .circle  {animation-delay: 700ms;}
+.row:nth-child(8) .circle  {animation-delay: 800ms;}
+.row:nth-child(9) .circle  {animation-delay: 900ms;}
+.row:nth-child(10) .circle {animation-delay: 1000ms;}
+.row:nth-child(11) .circle {animation-delay: 1100ms;}
+.row:nth-child(12) .circle {animation-delay: 1200ms;}
+.row:nth-child(13) .circle {animation-delay: 1300ms;}
+.row:nth-child(14) .circle {animation-delay: 1400ms;}

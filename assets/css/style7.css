@@ -1,0 +1,118 @@
+/* layout */
+#contents {}
+#section1 {position: relative; height: 100vh; background: #fff;} 
+#section2 {height: 100vh; background: #fff;}
+#section3 {}
+#section4 {}
+#section5 {}
+
+
+/* container */
+.container {width: 100%;}
+.row {padding: 20px;}
+
+/* progress */
+/* .progress         {background: #000; overflow: hidden; color: #fff; width: 100%; height: 100%; position: absolute; z-index: 5000;}
+.progress-bar     {border-top: 1px solid rgba(255,255,255,1); position: absolute; top: 50%; width: 0%;}
+.progress-text    {font-size: 40px; font-weight: bold; font-family: 'Sacramento', cursive; position: absolute; top: 55%; left: 50%; transform: translateX(-50%);}
+ */
+/* sec1 */
+.sec1 {height: 100vh;}
+.sec1 h1 {width: 200px; height: 200px; position: absolute; top: 20px; left: 20px;}
+.sec1 h1 .st0{fill:none; stroke:#000000; stroke-miterlimit:10;}
+.sec1 h1 .st1{fill:none; stroke:#000000; stroke-width:22; stroke-miterlimit:10;}
+.sec1 h1 .st2{fill:#ffF;}
+
+.sec1 h1.show .rect1 {
+    animation: rect1 1s .1s ease-in-out;
+    stroke-dasharray: 147; stroke-dashoffset: 147; stroke-miterlimit:10;
+    animation-fill-mode: forwards;
+}
+.sec1 h1.show .rect2 {
+    animation: rect2 1s .1s ease-in-out;
+    stroke-dasharray: 162; stroke-dashoffset: 162; stroke-miterlimit:10;
+    animation-fill-mode: forwards;
+}
+.sec1 h1.show .rect3 {
+    animation: rect3 1s .1s cubic-bezier(0.25, 0.1, 0.25, 1);
+    stroke-dasharray: 147; stroke-dashoffset: 147; stroke-miterlimit:10;
+    animation-fill-mode: forwards;
+}
+.sec1 h1.show .rect4 {
+    animation: rect4 1s .1s cubic-bezier(0.25, 0.1, 0.25, 1);
+    stroke-dasharray: 118; stroke-dashoffset: 118; stroke-miterlimit:10;
+    animation-fill-mode: forwards;
+}
+
+@keyframes rect1 {
+    0%   {stroke-dashoffset: 147;}
+    100% {stroke-dashoffset: 0;}
+}
+@keyframes rect2 {
+    0%   {stroke-dashoffset: 162;}
+    100% {stroke-dashoffset: 0;}
+}
+@keyframes rect3 {
+    0%   {stroke-dashoffset: 147;}
+    100% {stroke-dashoffset: 0;}
+}
+@keyframes rect4 {
+    0%   {stroke-dashoffset: 118;}
+    100% {stroke-dashoffset: 0;}
+}
+
+.sec1 .txt {position: absolute; bottom: 20px; left: 20px;  font-family: 'Matter TRIAL'; transition: all 1s cubic-bezier(0.25, 0.1, 0.25, 1);}
+.sec1 .txt span {display: block; font-size: 20px; margin-bottom: 5px; font-weight: 300;} 
+.sec1 .txt strong {display: block; font-size: 32px; line-height: 37px; font-weight: 600;  font-family: 'Matter TRIAL'; margin-bottom: 5px; } 
+.sec1 .txt em {display: block; font-size: 20px; font-weight: 300;}
+
+
+.sec1 .txt span {opacity: 0; transform: translateY(-20px); transition: all .6s .5s cubic-bezier(0.25, 0.1, 0.25, 1);}
+.sec1 .txt strong {opacity: 0; transform: translateY(20px); transition: all .6s .7s cubic-bezier(0.25, 0.1, 0.25, 1);}
+.sec1 .txt em {opacity: 0; transform: translateY(20px); transition: all .6s .9s cubic-bezier(0.25, 0.1, 0.25, 1);}
+
+.sec1 .txt.show span {opacity: 1; transform: translateY(0); transition: all .6s cubic-bezier(0.25, 0.1, 0.25, 1);}
+.sec1 .txt.show strong {opacity: 1; transform: translateY(0); transition: all .6s .1s cubic-bezier(0.25, 0.1, 0.25, 1);}
+.sec1 .txt.show em {opacity: 1; transform: translateY(0); transition: all .6s .2s cubic-bezier(0.25, 0.1, 0.25, 1);}
+
+.sec1 .txt.move span {transform: translateY(-400px);}
+.sec1 .txt.move strong {transform: translateY(-400px);}
+.sec1 .txt.move em {transform: translateY(-400px);}
+
+.sec1 .circle {
+	position: absolute; right: 60px; top: 40px; 
+	width: 700px;
+	transition: all .6s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+.sec1 .circle.show {
+    animation: circle 1.2s cubic-bezier(0.25, 0.1, 0.25, 1) forwards; 
+}
+@-webkit-keyframes circle {
+    0%{transform: scale(1);}
+    30%{transform: scale(.8);}
+    60% {transform: scale(1.1, 1.1);}
+    100% {transform: scale(1, 1);}
+}
+.sec1 .circle.show.move {
+	width: 1200px;
+	top: 400px;
+	right: 150px;
+}
+.sec1 .circle .c_text {
+	position: absolute; right: 60px; top: 60px;
+	width: 600px;
+	animation: text 15s 1.2s infinite linear;
+}
+@-webkit-keyframes text {
+	from {transform: rotate(0deg);}
+	to {transform: rotate(360deg);}
+}
+.sec1 .wcircle {
+	position: absolute; right: 60px; top: 40px; 
+	width: 700px;
+}
+
+
+
+
+

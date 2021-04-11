@@ -1,0 +1,372 @@
+/* layout */
+#contents {}
+#section1 {position: relative; height: 100vh; background: #ffcc00;} 
+#section2 {background: #660099;}
+#section3 {position: relative; height: 250vh; background: #ffcc00;}
+#section4 {position: relative; height: 550vh; background: #fff;}
+#section5 {background: #660099;}
+#section6 {position: relative; height: 200vh; background: #fff;}
+#section7 {height: 250vh; background: #ffcc00;;}
+#section8 {height: 100vh; background: #0099ff;}
+#section9 {height: 200vh; position: relative;}
+#section10 {height: 100vh;}
+
+
+
+/* container */
+.container {width: 100%;}
+.row {padding: 20px;}
+
+/* progress */
+/* .progress         {background: #000; overflow: hidden; color: #fff; width: 100%; height: 100%; position: absolute; z-index: 5000;}
+.progress-bar     {border-top: 1px solid rgba(255,255,255,1); position: absolute; top: 50%; width: 0%;}
+.progress-text    {font-size: 40px; font-weight: bold; font-family: 'Sacramento', cursive; position: absolute; top: 55%; left: 50%; transform: translateX(-50%);}
+ */
+/* sec1 */
+.sec1 {height: 100vh;}
+.sec1 h1 {width: 200px; height: 200px; position: absolute; top: 20px; left: 20px;}
+.sec1 h1 .st0{fill:none; stroke:#000000; stroke-miterlimit:10;}
+.sec1 h1 .st1{fill:none; stroke:#000000; stroke-width:22; stroke-miterlimit:10;}
+.sec1 h1 .st2{fill:#ffcc00;}
+
+.sec1 h1.show .rect1 {
+    animation: rect1 1s .1s ease-in-out;
+    stroke-dasharray: 147; stroke-dashoffset: 147; stroke-miterlimit:10;
+    animation-fill-mode: forwards;
+}
+.sec1 h1.show .rect2 {
+    animation: rect2 1s .1s ease-in-out;
+    stroke-dasharray: 162; stroke-dashoffset: 162; stroke-miterlimit:10;
+    animation-fill-mode: forwards;
+}
+.sec1 h1.show .rect3 {
+    animation: rect3 1s .1s cubic-bezier(0.25, 0.1, 0.25, 1);
+    stroke-dasharray: 147; stroke-dashoffset: 147; stroke-miterlimit:10;
+    animation-fill-mode: forwards;
+}
+.sec1 h1.show .rect4 {
+    animation: rect4 1s .1s cubic-bezier(0.25, 0.1, 0.25, 1);
+    stroke-dasharray: 118; stroke-dashoffset: 118; stroke-miterlimit:10;
+    animation-fill-mode: forwards;
+}
+
+@keyframes rect1 {
+    0%   {stroke-dashoffset: 147;}
+    100% {stroke-dashoffset: 0;}
+}
+@keyframes rect2 {
+    0%   {stroke-dashoffset: 162;}
+    100% {stroke-dashoffset: 0;}
+}
+@keyframes rect3 {
+    0%   {stroke-dashoffset: 147;}
+    100% {stroke-dashoffset: 0;}
+}
+@keyframes rect4 {
+    0%   {stroke-dashoffset: 118;}
+    100% {stroke-dashoffset: 0;}
+}
+
+.sec1 h2 {
+    font-family: 'Matter TRIAL'; font-weight: 600; font-size: 100px;
+    color: #000;
+    position: absolute;
+    top: 30%;
+    right: 5%;
+}
+.sec1 h2 em {display: block; opacity: 0; transform: translateY(-20px); transition: all .6s .5s cubic-bezier(0.25, 0.1, 0.25, 1);}
+.sec1 h2 span {display: block; margin-top: -50px; opacity: 0; transform: translateY(20px); transition: all .6s .7s cubic-bezier(0.25, 0.1, 0.25, 1);}
+.sec1 h2.show em {opacity: 1; transform: translateY(0);}
+.sec1 h2.show span {opacity: 1; transform: translateY(0);}
+
+.sec1 .txt {position: absolute; bottom: 20px; left: 20px;  font-family: 'Matter TRIAL';}
+.sec1 .txt span {display: block; font-size: 20px; margin-bottom: 5px; font-weight: 300;} 
+.sec1 .txt strong {display: block; font-size: 32px; line-height: 37px; font-weight: 600;  font-family: 'Matter TRIAL'; margin-bottom: 5px; } 
+.sec1 .txt em {display: block; font-size: 20px; font-weight: 300;}
+
+
+.sec1 .txt span {opacity: 0; transform: translateY(-20px); transition: all .6s .5s cubic-bezier(0.25, 0.1, 0.25, 1);}
+.sec1 .txt strong {opacity: 0; transform: translateY(20px); transition: all .6s .7s cubic-bezier(0.25, 0.1, 0.25, 1);}
+.sec1 .txt em {opacity: 0; transform: translateY(20px); transition: all .6s .9s cubic-bezier(0.25, 0.1, 0.25, 1);}
+
+.sec1 .txt.show span {opacity: 1; transform: translateY(0);}
+.sec1 .txt.show strong {opacity: 1; transform: translateY(0);}
+.sec1 .txt.show em {opacity: 1; transform: translateY(0);}
+
+.sec1 .circle {
+	position: absolute; right: 500px; top: 100px; 
+	width: 600px;
+	transition: all .6s cubic-bezier(0.25, 0.1, 0.25, 1);
+    opacity: 0;
+}
+.sec1 .circle .st0{fill:#000;}
+.sec1 .circle.show {
+    opacity: 1;
+    animation: circle 1.2s cubic-bezier(0.25, 0.1, 0.25, 1) forwards; 
+}
+@-webkit-keyframes circle {
+    0%{transform: scale(1);}
+    30%{transform: scale(.8);}
+    60% {transform: scale(1.1, 1.1);}
+    100% {transform: scale(1, 1);}
+}
+
+
+/* sec2 */
+.sec2 .illu1 img {display: block;}
+
+
+/* sec3 */
+.sec3 h2 {font-family: 'Matter TRIAL'; font-size: 250px; font-weight: 900; line-height: 210px; color: #000;}
+.sec3 h2 div {overflow: hidden;}
+.sec3 h2 div.top span {display: inline-block; transform: translateX(-600px); transition: all 1s cubic-bezier(0.115, 0.905, 0.32, 1);}
+.sec3 h2 div.bottom span{display: inline-block; transform: translateX(-500px); transition:all 1s .1S cubic-bezier(0.115, 0.905, 0.32, 1);}
+.sec3 h2.show div.top span {transform: translateX(10px);}
+.sec3 h2.show div.bottom span {transform: translateX(0);}
+
+.sec3 .bullet {
+    position: absolute;
+    right: 20px;
+    top: 40px;
+    width: 150px;   
+    height: 150px;  
+    background: #000;
+    border-radius: 50%;
+}
+
+.sec3 .list1 {overflow: hidden; width: 60%; position: absolute; right: 20px; top: 400px;}
+.sec3 li {font-family: 'Matter TRIAL'; padding-bottom: 0px; border-bottom: 1px solid rgba(0,0,0,1); margin-bottom: 20px; font-size: 70px; font-family: 'Quicksand', sans-serif;}
+.sec3 li p.think {font-size: 18px;}
+.sec3 li:last-child {padding-top: 30px; padding-bottom: 50px;}
+.sec3 .list1 span {display: block;}
+
+.sec3 .list1 li.li1 {opacity: 0; transform: translateY(200px); transition: all 1s .1s cubic-bezier(0.115, 0.905, 0.32, 1);}
+.sec3 .list1 li.li2 {opacity: 0; transform: translateY(200px); transition: all 1s .2s cubic-bezier(0.115, 0.905, 0.32, 1);}
+.sec3 .list1 li.li3 {opacity: 0; transform: translateY(200px); transition: all 1s .3s cubic-bezier(0.115, 0.905, 0.32, 1);}
+.sec3 .list1 li.li4 {opacity: 0; transform: translateY(200px); transition: all 1s .4s cubic-bezier(0.115, 0.905, 0.32, 1);}
+.sec3 .list1 li.li5 {opacity: 0; transform: translateY(200px); transition: all 1s .5s cubic-bezier(0.115, 0.905, 0.32, 1);}
+.sec3 .list1 li.li6 {opacity: 0; transform: translateY(200px); transition: all 1s .6s cubic-bezier(0.115, 0.905, 0.32, 1);}
+
+.sec3 .list1.show .li1 {opacity: 1; transform: translateY(0);}
+.sec3 .list1.show .li2 {opacity: 1; transform: translateY(0);}
+.sec3 .list1.show .li3 {opacity: 1; transform: translateY(0);}
+.sec3 .list1.show .li4 {opacity: 1; transform: translateY(0);}
+.sec3 .list1.show .li5 {opacity: 1; transform: translateY(0);}
+.sec3 .list1.show .li6 {opacity: 1; transform: translateY(0);}
+
+
+/* .sec4 */
+.sec4 {}
+.sec4 h2 {font-family: 'Matter TRIAL'; font-size: 250px; font-weight: 900; line-height: 210px; color: #000;}
+.sec4 h2 div {overflow: hidden;}
+.sec4 h2 .top span {display: inline-block; transform: translateX(-1100px); transition: all 1s cubic-bezier(0.115, 0.905, 0.32, 1);}
+.sec4 h2 .middle span {display: inline-block; transform: translateX(-1000px); transition: all 1s .1s cubic-bezier(0.115, 0.905, 0.32, 1);}
+.sec4 h2 .bottom span {display: inline-block; transform: translateX(-600px); transition: all 1s .2s cubic-bezier(0.115, 0.905, 0.32, 1);}
+.sec4 h2.show .top span {transform: translateX(0);}
+.sec4 h2.show .middle span {transform: translateX(0);}
+.sec4 h2.show .bottom span {transform: translateX(0);}
+
+.sec4 .bullet {
+    position: absolute;
+    right: 20px;
+    top: 40px;
+    width: 150px;   
+    height: 150px;  
+    background: #000;
+    border-radius: 50%;
+}
+
+.sec4 .biglogo1 {width: 50%;}
+.sec4 .biglogo1 .st0 {fill:none;stroke:#000000;stroke-width:180;stroke-miterlimit:10;}
+.sec4 .biglogo1.show .logo1 {animation: logo1 1.5s 1 ease-in-out forwards; stroke-dasharray: 1583; stroke-dashoffset: 1583; stroke-miterlimit: 10;}
+@keyframes logo1 {
+    0%   {stroke-dashoffset: 1583;}
+    100% {stroke-dashoffset: 0;}
+}
+
+.sec4 .ul1 {
+    overflow: hidden; 
+    position: absolute; right: 20px; top: 19%; 
+    width: 40%;
+    opacity: 0;
+    transform: translateY(200px);
+    transition: all 1s cubic-bezier(0.115, 0.905, 0.32, 1);
+}
+.sec4 .ul1 li {font-family: 'Matter TRIAL'; padding-bottom: 50px; border-bottom: 1px solid #000; margin-bottom: 20px;}
+.sec4 .ul1 li:first-child {padding-bottom: 20px;}
+.sec4 .ul1 h3 {font-size: 90px; font-weight: 400; line-height: 75px;}
+.sec4 .ul1 h3 .num {font-size: 60px; font-weight: 300; display: inline-block; padding-right: 30px;}
+.sec4 .ul1 h3 .tit {display: block; padding-left: 70px;}
+.sec4 .ul1.show {opacity: 1; transform: translateY(0);}
+
+.sec4 .biglogo2 {width: 50%; position: absolute; top: 43%; right: 20px;}
+.sec4 .biglogo2 .st0{fill:none;stroke:#000000;stroke-width:180;stroke-miterlimit:10;}
+.sec4 .biglogo2 .logo2 {opacity: 0;}
+.sec4 .biglogo2.show .logo2 {opacity: 1; animation: logo2 1.5s 1 ease-in-out forwards; stroke-dasharray: 1583; stroke-dashoffset: 1583; stroke-miterlimit: 10;}
+@keyframes logo2 {
+    0%   {stroke-dashoffset: 1583;}
+    100% {stroke-dashoffset: 0;}
+}
+
+.sec4 .ul2 {
+    position: absolute; top: 39%; width: 40%;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(200px);
+    transition: all 1s cubic-bezier(0.115, 0.905, 0.32, 1);
+}
+.sec4 .ul2 li {font-family: 'Matter TRIAL'; padding-bottom: 50px; border-bottom: 1px solid #000; margin-bottom: 20px;}
+.sec4 .ul2 li:first-child {padding-bottom: 20px;}
+.sec4 .ul2 h3 {font-size: 90px; font-weight: 400; line-height: 75px;}
+.sec4 .ul2 h3 .num {font-size: 60px; font-weight: 300; display: inline-block; padding-right: 30px;}
+.sec4 .ul2 h3 .tit {display: block; padding-left: 70px;}
+.sec4 .ul2.show {opacity: 1; transform: translateY(0);}
+
+.sec4 .ul3 {
+    position: absolute; top: 53%; width: 40%;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(200px);
+    transition: all 1s cubic-bezier(0.115, 0.905, 0.32, 1);
+}
+.sec4 .ul3 li {font-family: 'Matter TRIAL'; padding-bottom: 50px; border-bottom: 1px solid #000; margin-bottom: 20px;}
+.sec4 .ul3 li:first-child {padding-bottom: 20px;}
+.sec4 .ul3 h3 {font-size: 90px; font-weight: 400; line-height: 75px;}
+.sec4 .ul3 h3 .num {font-size: 60px; font-weight: 300; display: inline-block; padding-right: 30px;}
+.sec4 .ul3 h3 .tit {display: block; padding-left: 70px;}
+.sec4 .ul3.show {opacity: 1; transform: translateY(0);}
+
+.sec4 .biglogo3 {width: 55%; position: absolute; top: 67%;}
+.sec4 .biglogo3 .st0{fill:none;stroke:#000000;stroke-width:290;stroke-miterlimit:10;}
+.sec4 .biglogo3 .st1{fill:#FFFFFF;}
+.sec4 .biglogo3 .logo3 {opacity: 0;}
+.sec4 .biglogo3.show .logo3 {opacity: 1; animation: logo3 1.5s 1 ease-in-out forwards; stroke-dasharray: 2608; stroke-dashoffset: 2608; stroke-miterlimit: 10;}
+@keyframes logo3 {
+    0%   {stroke-dashoffset: 2608;}
+    100% {stroke-dashoffset: 0;}
+}
+
+.sec4 .ul4 {
+    position: absolute; top: 70%; width: 40%; right:20px;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(200px);
+    transition: all 1s cubic-bezier(0.115, 0.905, 0.32, 1);
+}
+.sec4 .ul4 li {font-family: 'Matter TRIAL'; padding-bottom: 50px; border-bottom: 1px solid #000; margin-bottom: 20px;}
+.sec4 .ul4 li:first-child {padding-bottom: 20px;}
+.sec4 .ul4 h3 {font-size: 90px; font-weight: 400; line-height: 75px;}
+.sec4 .ul4 h3 .num {font-size: 60px; font-weight: 300; display: inline-block; padding-right: 30px;}
+.sec4 .ul4 h3 .tit {display: block; padding-left: 70px;}
+.sec4 .ul4.show {opacity: 1; transform: translateY(0);}
+
+.sec4 .ul5 {
+    position: absolute; top: 87%; width: 97%;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(200px);
+    transition: all 1s cubic-bezier(0.115, 0.905, 0.32, 1);}
+.sec4 .ul5 li {font-family: 'Matter TRIAL'; padding-bottom: 50px; border-bottom: 1px solid #000; margin-bottom: 20px;}
+.sec4 .ul5 li:first-child {padding-bottom: 20px;}
+.sec4 .ul5 h3 {font-size: 90px; font-weight: 400; line-height: 75px;}
+.sec4 .ul5 h3 .num {font-size: 60px; font-weight: 300; display: inline-block; padding-right: 30px;}
+.sec4 .ul5 h3 .tit {display: block; padding-left: 70px;}
+.sec4 .ul5.show {opacity: 1; transform: translateY(0);}
+
+
+/* sec5 */
+.sec5 .illu2 img {display: block;}
+
+/* sec6 */
+.sec6 h2 {font-family: 'Matter TRIAL'; font-size: 250px; font-weight: 900; line-height: 210px; color: #000;}
+.sec6 h2 div {overflow: hidden;}
+.sec6 h2 div.top span {display: inline-block; transform: translateX(-600px); transition: all 1s cubic-bezier(0.115, 0.905, 0.32, 1);}
+.sec6 h2 div.bottom span{display: inline-block; transform: translateX(-500px); transition:all 1s .1S cubic-bezier(0.115, 0.905, 0.32, 1);}
+.sec6 h2.show div.top span {transform: translateX(10px);}
+.sec6 h2.show div.bottom span {transform: translateX(0);}
+
+.sec6 .bullet {
+    position: absolute;
+    right: 20px;
+    top: 40px;
+    width: 150px;   
+    height: 150px;  
+    background: #000;
+    border-radius: 50%;
+}
+
+/* sec7 */
+.sec7 ul li {
+    font-family: 'Matter TRIAL';
+    font-size: 170px;
+    font-weight: 200;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #000;
+    margin-bottom: 20px;
+    white-space: nowrap;
+    overflow: hidden; text-overflow: ellipsis;
+}
+.sec7 ul li:last-child {
+    margin-bottom: 0;
+}
+.sec7 ul li span {
+    display: inline-block;
+    width: 150px;
+    height: 10px;
+    background: #000;
+    margin: 0 20px 50px 20px;
+}
+
+/* sec9 */
+.sec9 h2 {font-family: 'Matter TRIAL'; font-size: 250px; font-weight: 900; line-height: 210px; color: #000;}
+
+.sec9 .bullet {
+    position: absolute;
+    right: 20px;
+    top: 40px;
+    width: 150px;   
+    height: 150px;  
+    background: #000;
+    border-radius: 50%;
+}
+.sec9 ul {width: 50%; position: absolute; right: 20px; top: 500px;}
+.sec9 ul li {font-family: 'Matter TRIAL'; font-size: 24px; padding-bottom: 30px; border-bottom: 1px solid #000; margin-bottom: 30px;}
+.sec9 ul li span {float: right;}
+.sec9 li img {width: 500px;}
+.sec9 li:nth-child(4) {text-align: center;}
+.sec9 li p {font-weight: 300;}
+.sec9 li form {width: 80%; margin: 0 auto;}
+.sec9 form fieldset label {
+
+}
+.sec9 form fieldset input {
+    display: block;
+    border: 2px solid #000;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    box-sizing: border-box;
+    padding: 5px;
+}
+.sec9 form fieldset textarea {
+    display: block;
+    border: 2px solid #000;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+/* sec10 */
+.sec10 {overflow: hidden; width: 100%;}
+.sec10 .leftbox {float: left; width: 50%; height: 100vh; background: #660099;}
+.sec10 .rightbox { float: left; width: 50%; height: 100vh; background: #ff3333;}
+.sec10 .rightbox .gotop {text-align: center; padding-top: 25vh;}
+.sec10 .rightbox .gotop img {
+    width: 50%; 
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition-duration: .3s;}
+.sec10 .rightbox .gotop img:hover {transform: rotate(-45deg);}

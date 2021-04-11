@@ -1,0 +1,297 @@
+@charset "urf-8";
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro&family=Noto+Sans+KR:wght@300;700&family=Unna&display=swap');
+
+/*reset*/
+*{margin: 0; padding: 0;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin:0;padding:0;}
+h1, h2, h3, h4, h5, h6 {font-weight: 700; font-size: inherit;}
+a {text-decoration: inherit; color: inherit;}
+li {list-style: none;}
+img {vertical-align: middle;}
+a img {border: none;}
+address, em, i {font-style: normal;}
+a:focus {outline: none}
+button:focus {outline: none}
+
+/*layout*/
+body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px; color:#000; line-height: 1.4;}
+.wrap {width: 100%; margin:0 auto; overflow:hidden;  }
+.en {font-family: 'Unna', serif;}
+.en_1{font-family: 'Maven Pro', sans-serif;}
+.menuWrap span {display: block;}
+.menuWrap span b {font-weight: normal;}
+
+/*menuOpen*/
+.menuWrap {width: 100%; height: 100vh; position: fixed; top:0; left: 0; z-index: 100; background: #eee; color: #000; padding: 160px 200px 0 450px; box-sizing: border-box; overflow: hidden;}
+.menuWrap .close {display: inline-block; position: absolute; top:5px; left: 40px; font-size: 16px;}
+.menuWrap .close img {margin-right: 25px;}
+
+/*.menuWrap .menuWrap_left*/
+.menuWrap .menuWrap_left {float: left; width: 50%; }
+.menuWrap .menuWrap_left .tit {margin-bottom: 50px; letter-spacing: 2px; font-weight: normal;}
+.menuWrap .menuWrap_left li a {font-size: 44px; line-height: 1.5;}
+.menuWrap .menuWrap_right {float: left; width: 50%;}
+.menuWrap .menuWrap_right .fam_site {font-size: 18px; line-height: 1.7; margin-bottom:100px;}
+.menuWrap .menuWrap_right .fam_site li:nth-child(1) {font-size: 15px; margin-bottom: 23px;}
+.menuWrap .menuWrap_right .follow p {font-size: 15px;line-height: 1;}
+.menuWrap .menuWrap_right .follow a {display: inline-block;margin-right: 25px; font-size: 24px;}
+
+/*text animation*/
+.menuWrap.on span {overflow: hidden;}
+.menuWrap.on span b{overflow: hidden; display: block; animation-name: textAni; animation-duration: 1.4s;}
+@keyframes textAni {
+    0% {opacity: 0;}
+    40% {opacity: 0; transform: translateY(100px);}
+}
+
+/*메인메뉴만 타이밍 조절*/
+
+.menuWrap.on .tit li:nth-child(2) span b {animation-duration: 1.5s;}
+.menuWrap.on .tit li:nth-child(3) span b {animation-duration: 1.6s;}
+.menuWrap.on .tit li:nth-child(4) span b {animation-duration: 1.7s;}
+.menuWrap.on .tit li:nth-child(5) span b {animation-duration: 1.8s;}
+.menuWrap.on .tit li:nth-child(6) span b {animation-duration: 1.9s;}
+
+.menuWrap {width: 0; transition: 0s; overflow: hidden; opacity: 0; padding: 0;}
+.menuWrap.on {width: 100%; left: 0; transition: 0.5s; opacity: 1; padding: 160px 200px 0 450px; }
+
+
+/*header*/
+header {width: 100%; padding: 0 40px; box-sizing: border-box; height: 100px; line-height: 100px; color: #fff; z-index: 100; position: fixed; top:0; }
+header.on {background: rgba(96,77,62,0.3);}
+header .menuOpen{display: inline-block; position: absolute; top:50%; transform: translateY(-50%); width: 40px;height: 16px; line-height: 100px;}
+header .menuOpen span {display: block; width: 100%; height: 1px;background: #fff;position: absolute; top:0;left: 0;}
+header .menuOpen span.mid {top:50%;}
+header .menuOpen span.bot {top:100%;}
+header .book {display: inline-block; float:left; margin-left: 70px;height: 100%; font-size: 25px; }
+header .langs {float:left; margin-left: 220px;overflow: hidden; width: 150px; }
+header .langs li {float: left; width: 50%;}
+header .langs li:nth-child(1){font-weight: bold;}
+header .langs li:nth-child(2){color: #ddd;}
+header .langs li a {display: block;padding: 0 30px; box-sizing: border-box;text-transform: uppercase;}
+header .right {float: right;}
+header .right li {float: left;margin-right: 55px;}
+header .right li:nth-child(2){margin-right: 0;}
+header .right li p{letter-spacing: 1px;}
+header .right li .logo {width: 150px;height: 100px;}
+header .right li .logo a {display: block; width: 100%;height: 100%;position: relative;}
+header .right li .logo a img {position: absolute; left: 0; top:50%; transform: translateY(-50%); width: 100%;}
+header .right li .logo a img:nth-child(2){opacity: 0;}
+
+/*visual*/
+.visual {color:#fff;}
+.visual .slide li {position: relative; width: 100%; height: 100vh;}
+.visual .slide li img{position: absolute; right: 0; top:0; width: 100%;}
+/*visual .mainText*/
+.visual .slide .mainText {position: absolute; top:35%; right: 18%; width: 25%;}
+.visual .slide .mainText strong {display: block; font-size: 50px; margin-bottom: 30px;font-weight: 500; letter-spacing: 2px; opacity: 1;}
+.visual .slide .mainText > p {font-size: 20px; font-weight: normal;line-height: 1.8;margin-bottom: 70px;}
+.visual .slide .mainText .num {position: relative; font-size: 30px; font-weight: bold; margin-bottom: 30px;}
+.visual .slide .mainText .num span {position: absolute; top:-10px; display: inline-block; padding: 10px 4px; opacity: 0;}
+.visual .slide .mainText .message {font-size: 26px; line-height: 1.2;}
+
+/*비주얼 공통 하단 메뉴*/
+.visual .menu {position:absolute; left: 4%; bottom: 7%; font-size: 21px;padding-bottom: 7px;overflow: hidden; }
+.visual .menu:after {content: ''; width: 100%; height: 4px; background: #fff; position: absolute; left:0; bottom: 0; animation: bar 4.5s infinite;}
+@keyframes bar {
+    0%{width: 0%;}
+}
+
+.visual .menu li {float: left; padding-right: 20px;}
+.visual .menu li:nth-child(2){padding-right: 130px;}
+.visual .menu li:nth-child(3){padding-right: 0;}
+.visual .menu li span i {display: inline-block; margin-right: 10px; font-size: 18px;}
+.visual .menu li:nth-child(2) span i {margin-right: 22px;}
+.visual .menu li p {font-size: 28px;}
+
+/*animation*/
+@keyframes trans {
+    0% {opacity: 0; transform: translateY(15px);}
+    30% {opacity: 1; transform: translateY(0);}
+    70% {opacity: 1; transform: translateY(0);}
+    100% {opacity: 0; transform: translateY(-15px);}
+}
+.visual .slide .slick-active .mainText .num span {animation-name: trans; animation-duration: 4.5s;}
+
+@keyframes opa {
+    0%{opacity: 0;}
+}
+.visual .slide .slick-active .mainText strong {animation-name:opa; animation-duration: 3s;}
+
+@keyframes  slide-up {
+    0%{opacity: 0;}
+    20%{opacity: 0; transform: translateY(10px);}
+}
+.visual .slide .slick-active .mainText > p {animation-name: slide-up; animation-duration: 1.5s;}
+
+@keyframes scaleani {
+    0%{transform: scale(1.1);}
+} 
+.visual .slide .slick-active li img{animation-name: scaleani; animation-duration: 4.5s;}
+
+/*section.introduce*/
+.introduce {width: 88%; margin:130px auto 0;} 
+.introduce .title {font-size: 32px; line-height:1.6;margin-bottom: 100px;}
+.introduce .roomInfo{ width: 100%; height: 884px; position: relative;}
+.introduce .roomInfo .tab {width: 380px; text-transform: uppercase; margin-bottom: 40PX; overflow: hidden;}
+.introduce .roomInfo .tab li{float: left; width: 40%; margin-right: 3%;}
+.introduce .roomInfo .tab li:nth-child(2){margin-right: 0;}
+.introduce .roomInfo .tab li a {display: block; width: 100%; height: 100%; font-size: 16px;}
+.introduce .roomInfo .tab li.on {color:#a68164;}
+
+/*글자갯수만큼 바가 생기기위해 span으로 감쌈*/
+.introduce .roomInfo .tab li a span {display: inline-block; position: relative; padding: 5px 0; box-sizing: border-box;}
+.introduce .roomInfo .tab li a span:after {content: ''; position: absolute; left: 0; bottom: 0; width: 0; height: 1px; background: #a68164; transition: all 0.5s;}
+.introduce .roomInfo .tab li a span:hover:after{width: 100%;}
+
+/*.introduce tabBox*/
+.introduce .roomInfo  .tabBox {width: 100%; position: absolute; left: 0; top:11%;  display: none;}
+.introduce .roomInfo  .tabBox.on {display: block;}
+.introduce .roomInfo  .tabBox .deluxe {overflow: hidden;width: 100%;}
+.introduce .roomInfo  .tabBox .deluxe .photo {float: left; width: 60%; position: relative;}
+.introduce .roomInfo  .tabBox .deluxe .photo img {width: 100%;}
+.introduce .roomInfo  .tabBox .deluxe .photo .showBox {width: 25%; position: absolute;left: 8%; bottom:18%; color: #fff;  letter-spacing: 1.5px;}
+.introduce .roomInfo  .tabBox .deluxe .photo .showBox .name {padding-bottom: 15px; box-sizing: border-box;border-bottom: 1px solid rgba(235,235,235,0.33);margin-bottom: 10px; position: relative;}
+.introduce .roomInfo  .tabBox .deluxe .photo .showBox .name:after {content: ''; width: 100%; height: 1px; background: #fff; position: absolute; left: 0;bottom: 0; animation: bar 4.4s; }
+.introduce .roomInfo  .tabBox .deluxe .photo .showBox .btn {letter-spacing: 1px; margin-bottom: 10px;}
+
+.introduce .roomInfo  .tabBox .deluxe .txtinfo {float: right; width: 40%; text-align: center; margin-top: 180px;}
+.introduce .roomInfo  .tabBox .deluxe .txtinfo .titBox {margin-bottom: 120px;}
+.introduce .roomInfo  .tabBox .deluxe .txtinfo .titBox h3 {font-size: 35px; font-weight: normal; letter-spacing: 1px; margin-bottom: 30px;}
+.introduce .roomInfo  .tabBox .deluxe .txtinfo .titBox p {font-size: 17px; color:#604d3e;}
+.introduce .roomInfo  .tabBox .deluxe .txtinfo .inner_detail li{margin-bottom: 50px;}
+.introduce .roomInfo  .tabBox .deluxe .txtinfo .inner_detail li span {display: block; margin-bottom: 20px; color:#a68164;}
+.introduce .roomInfo  .tabBox .deluxe .txtinfo .inner_detail li p {font-size: 17px;}
+
+
+/*introduce .motion*/
+@keyframes slide-up2 {
+     0%{opacity: 0;}
+    20%{opacity: 0; transform: translateY(40px);}
+}
+.introduce .title.motion  {animation-name: slide-up2; animation-duration: 1.2s;}
+.introduce .roomInfo.motion {animation-name: slide-up2; animation-duration: 0.8s;}
+.introduce .roomInfo.motion  .tabBox .deluxe .photo .showBox .name  {animation-name: slide-up2; animation-duration: 2s;}
+.introduce .roomInfo.motion  .tabBox .deluxe .txtinfo .titBox h3 {animation-name: slide-up2; animation-duration: 1.4s;}
+.introduce .roomInfo.motion  .tabBox .deluxe .txtinfo .titBox p {animation-name: slide-up2; animation-duration: 1.6s;}
+.introduce .roomInfo  .tabBox .deluxe .txtinfo .inner_detail li{animation-name: slide-up2; animation-duration: 2s; animation-delay: 0.2s;}
+.introduce .roomInfo  .tabBox .deluxe .txtinfo .inner_detail li:nth-child(2){animation-duration: 2.2s;animation-delay: 0.3s; }
+.introduce .roomInfo  .tabBox .deluxe .txtinfo .inner_detail li:nth-child(3){animation-duration: 2.4s; animation-delay: 0.4s;}
+
+/*section.offer*/
+.offer {width: 87%; margin:200px auto 100px;}
+.offer h2 {font-size: 30px; line-height: 1.7; font-weight: 500; margin-bottom: 15px;}
+.offer .findBtn {display: block;  font-size: 15px; color:#a68164; margin-bottom: 35px;}
+.offer .new {width: 100%; overflow: hidden;}
+.offer .new li {float: left; width: 23.5%; margin-right: 2%; }
+.offer .new li:nth-child(4) {margin-right: 0;}
+.offer .new li p.img {width: 100%;margin-bottom: 35px; overflow: hidden;}
+.offer .new li p.img a{display: block; width: 100%; height: 100%;}
+.offer .new li p.img a:hover img {transform: scale(1.2);transition: all 0.5s; }
+.offer .new li p.img a img {width: 100%; transition: all 0.3s;}
+.offer .new li span {display: block;  margin-bottom: 20px;}
+.offer .new li h3 {font-size: 20px; letter-spacing: -1px; font-weight: 500; margin-bottom: 15px;}
+.offer .new li .hashTag {font-size: 15px; letter-spacing: -1px; color:#a68164;height: 100px; }
+.offer .new li > a {display: inline-block; font-size: 15px; color:#a68164; position: relative; padding: 5px 0;}
+.offer .new li > a:after {content: ''; width: 0; height: 1px; position: absolute; left: 0; bottom: 0; background:#a68164; transition: all 0.5s; }
+.offer .new li > a:hover:after {width: 100%;}
+
+/*section.offer .motion*/
+.offer h2.motion {animation-name: slide-up2; animation-duration: 0.8s;}
+.offer .findBtn.motion {animation-name: slide-up2; animation-duration: 1.2s;}
+.offer .new li.motion {animation-name: slide-up2; animation-duration: 1.2s;}
+.offer .new li.motion:nth-child(2) {animation-duration: 1.4s;}
+.offer .new li.motion:nth-child(3) {animation-duration: 1.6s;}
+.offer .new li.motion:nth-child(4) {animation-duration: 1.8s;}
+
+/*section.intro_dining*/
+.intro_dining {width: 100%; overflow: hidden; background: #d7cdc5; height: 900px;}
+.intro_dining .slide2 {float: left; width: 50%;}
+.intro_dining .slide2 li {width: 100%; position: relative;}
+.intro_dining .slide2 li img {width: 100%;}
+.intro_dining .slide2 li .slide_txt {position: absolute; left: 8%; bottom: 19%; color:#fff;}
+.intro_dining .slide2 li .slide_txt h3 {font-size: 35px; font-weight: normal;letter-spacing: 3px; margin-bottom: 30px;}
+.intro_dining .slide2 li .slide_txt p {font-size: 18px; line-height: 1.7; margin-bottom: 45px;  }
+.intro_dining .slide2 li .slide_txt a {display: block; width: 150px; background: #a68164;padding: 12px 20px; text-align: center; position: relative; z-index: 1;}
+.intro_dining .slide2 li .slide_txt a:after {content: ''; width: 100%; height: 0;position: absolute; left: 0; top:0; background: #604a3e;}
+.intro_dining .slide2 li .slide_txt a:hover:after {height: 100%; transition: height 0.5s ease;z-index: -1; }
+.intro_dining .intro_diningTxt {float: left; width: 50%;padding: 80px 0 0 80px; box-sizing: border-box;}
+.intro_dining .intro_diningTxt h3 {font-size: 25px; font-weight: 500; line-height: 1.7; margin-bottom: 520px;}
+.intro_dining .intro_diningTxt p {font-size: 15px; color: #a68164; line-height: 1.6;}
+
+/*intro_dining .slick-active*/
+.intro_dining .slide2 .slick-active .slide_txt h3 {animation-name: slide-up2; animation-duration: 0.6s;}
+.intro_dining .slide2 .slick-active .slide_txt p {animation-name: slide-up2; animation-duration: 1.0s;}
+.intro_dining .slide2 .slick-active .slide_txt a {animation-name: slide-up2; animation-duration: 1.2s;}
+.intro_dining .intro_diningTxt.motion h3 {animation-name: slide-up2; animation-duration: 2s;}
+
+/*section.greetings*/
+.greetings {width: 100%; text-align: center; margin: 100px 0 100px; }
+.greetings h2 {font-size: 17px; font-weight: normal; color:#a68164; margin-bottom: 60px; }
+.greetings h3 {font-size: 32px; line-height: 1.6; font-weight: 500; margin-bottom: 50px; }
+.greetings a {display: block; width: 150px; margin:auto; text-align:center; border: 1px solid #a68164; padding: 12px 20px;}
+
+/*section.news_notice*/
+.news_notice {width: 100%;  border-top: 1px solid #d3cdb7; overflow: hidden;}
+.news_notice .title_wrap {width: 7%; height: 395px; float: left; border-right: 1px solid #e3dbd7; box-sizing: border-box; position: relative;}
+.news_notice .title_wrap .inner {font-size: 20px; text-align: center;position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%);}
+.news_notice .title_wrap .inner .news_title {transform: rotate(-90deg); width: 200px;}
+.news_notice .title_wrap .inner .news_title a {display: block; color:#604d3e; font-size: 16px;}
+.news_notice .notice_list {width: 90%; float:left; padding-top: 98px; overflow: hidden; }
+.news_notice .notice_list li {float: left; width: 33.3333%;padding-right: 50px; box-sizing: border-box;}
+.news_notice .notice_list li .data {display: block; text-align: right; font-size: 38px; }
+.news_notice .notice_list li .textBox {width: 80%; float: right;}
+.news_notice .notice_list li .textBox strong {display: block; font-size: 20px; font-weight: 500; color:#1d212a; margin-bottom: 50px;}
+.news_notice .notice_list li .textBox .list_txt {font-size: 14px; color: #604d3e; height: 115px;}
+.news_notice .notice_list li .textBox a.more {display: block; width: 80px; font-size: 15px;  padding: 5px 0; position: relative; margin-bottom: 50px; color:#a68164;}
+.news_notice .notice_list li .textBox a.more:after{content: ''; width: 0;height: 1px; background: #a68164; position: absolute; left: 0; bottom: 0; transition: all 0.5s;}
+.news_notice .notice_list li .textBox a.more:hover:after {width: 100%;}
+
+/*motion*/
+.news_notice .notice_list.motion li {animation-name: slide-up2; animation-duration: 0.8s;}
+.news_notice .notice_list.motion li:nth-child(2){animation-duration: 1s;}
+.news_notice .notice_list.motion li:nth-child(3){animation-duration: 1.2s;}
+.news_notice .notice_list.motion li:nth-child(4){animation-duration: 1.4s;}
+
+/*section.club_banner*/
+.club_banner {width: 100%; background: url(../images/club.jpg)no-repeat center/cover;}
+.club_banner .inner {width: 78%; margin:auto; padding: 200px 0; text-align: center; color: #fff;}
+.club_banner .inner h3 {font-size: 38px; font-weight: normal; margin-bottom: 50px;}
+.club_banner .inner a.more {display: block; width: 80px;margin: auto;  padding: 5px 0; font-size: 15px; position: relative;}
+.club_banner .inner a.more:after {content: ''; width: 0; height: 1px;background: #a68164;position: absolute;left: 0; bottom: 0; transition: all 0.5s;}
+.club_banner .inner a.more:hover:after{width: 100%;}
+
+/*motion*/
+.club_banner .inner.motion h3 {animation-name: slide-up2; animation-duration: 0.8s;}
+.club_banner .inner.motion a.more {animation-name: slide-up2; animation-duration: 1s;}
+
+/*footer*/
+footer{width: 100%; background: #161e27;}
+footer .foot_inner {width: 87%;  margin:auto; padding: 80px 0; color:#fff; overflow: hidden; position: relative;}
+footer .foot_inner .logo {float: left; width: 16%;}
+footer .foot_inner .contact_area {float: left; width: 68%; }
+footer .foot_inner .contact_area li {float:left; width: 18%;}
+footer .foot_inner .contact_area li:nth-child(1) {width: 34%; }
+footer .foot_inner .contact_area li:nth-child(3) {width: 24%; }
+footer .foot_inner .contact_area li p {margin-bottom: 5px;}
+footer .foot_inner .contact_area li p a{font-size: 14px;}
+footer .foot_inner .contact_area li p.adrress {font-size: 18px;}
+footer .foot_inner .contact_area li p span {display: inline-block; margin-right: 10px;}
+footer .foot_inner .contact_area li p.mail, footer .foot_inner .contact_area li p.tel {letter-spacing: 1px;}
+footer .foot_inner .footer_right {float: right; width: 16%; }
+footer .foot_inner .footer_right .icon li{float: right; padding-left: 40px;box-sizing: border-box;}
+footer .foot_inner .footer_right .icon li:nth-child(3){padding-left: 0;}
+footer .foot_inner .footer_right .icon li:nth-child(3) img {width: 70%;}
+footer .foot_inner .footer_right .icon li a {font-size: 20px;}
+footer .foot_inner .footer_right .fam_site_wrap {width: 170px; position: absolute;right: 0;bottom: 30px;font-size: 13px;}
+footer .foot_inner .footer_right .fam_site_wrap .txt_wrap {width: 100%;height: 33px; margin-bottom: 10px;}
+footer .foot_inner .footer_right .fam_site_wrap .txt_wrap .btn_fam {display: block; width: 100%; padding: 5px 15px 5px 20px; box-sizing: border-box; text-align: left; background: #161e27; color:#fff; border: 1px solid rgba(255,255,255,0.1);border-radius: 3px; cursor: pointer;margin-bottom: 20px;}
+footer .foot_inner .footer_right .fam_site_wrap .txt_wrap .btn_fam .fma_sit_tit{margin-right: 55px;}
+
+
+
+footer .foot_inner .footer_right .fam_site_wrap .item_wrap {display: none; width: 100%; height: 156px;padding: 18px 20px 16px;box-sizing: border-box; position: absolute; left: 0; bottom: 58px;background: #fff;  overflow: scroll;}
+footer .foot_inner .footer_right .fam_site_wrap .item_wrap a {display: block; width: 100%;  padding: 6px;box-sizing: border-box; transition: 0.4s color ease;  color: #1d212a;}
+footer .foot_inner .footer_right .fam_site_wrap .copy {font-size: 11px;color: #888; }
+
+
